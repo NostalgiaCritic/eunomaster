@@ -194,13 +194,14 @@
         <section class="contact">
             <h5 class="my-3 border-bottom pb-2">상담 신청</h5>
             <form method="post" class="post-form my-3">
-
-                {{ form.name.label }}
-                {{ form.name(class="form-control") }}
-
-                {{ form.number.label }}
-                {{ form.number(class="form-control") }}
-
+                <div class="form-group">
+                    <label for="name">성함</label>
+                    <input type="text" class="form-control" name="name" id="name" value="{{ form.name.data or '' }}">
+                </div>
+                <div class="form-group">
+                    <label for="number">전화번호</label>
+                    <input type="text" class="form-control" name="number" id="number" value="{{ form.number.data or '' }}">
+                </div>
                 <button type="submit" class="btn btn-primary">신청하기</button>
             </form>
         </section>
