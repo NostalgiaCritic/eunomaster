@@ -194,6 +194,7 @@
         <section class="contact">
             <h5 class="my-3 border-bottom pb-2">상담 신청</h5>
             <form method="post" class="post-form my-3">
+                {{form.csrf_token}}
                 <div class="form-group">
                     <label for="name">성함</label>
                     <input type="text" class="form-control" name="name" id="name" value="{{ form.name.data or '' }}">
