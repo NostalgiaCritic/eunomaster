@@ -1,0 +1,166 @@
+@media screen and (max-width:1280px){
+    figure {
+        width: 100vw;
+        height: auto;
+        min-height: 85vh;
+        background-image: url(..static/img/main_bg.jpg);
+        background-size: 150%r;
+        margin:0px;
+    }
+
+        figure .inner p {
+        font: 35px/1 'Nanum Myeongjo';
+        color: #888;
+        margin:200px 0px 30px;
+        text-align: center;
+        
+    }
+
+    figure .name {
+        font: 23px 'Noto Sans KR';
+
+    }
+    
+    figure .grade {
+        font: 18px 'Noto Sans KR', sans-serif;
+
+    }
+
+    figure .write {
+        width: 20px;
+    }
+
+}
+
+@media screen and (max-width:1080px){
+figure {    
+    width: 100vw;
+    height: auto;
+    min-height: 115vh;
+
+}
+figure .name {
+    font: 30px 'Noto Sans KR';
+    float:left;
+    margin-right: 10px;
+}
+
+figure .grade {
+    font: 25px 'Noto Sans KR', sans-serif;
+    float:left;
+    margin-top: 8px;
+}
+}
+
+
+@media  (max-width:970px){
+figure {    
+    width: 100vw;
+    height: auto;
+}
+
+section .inner2 .card1 .textbox h3 {
+    margin-bottom: 20px;
+    font-size: 2.5vw;
+    font-weight: 600;
+}
+
+section .inner2 .card1 .textbox p {
+    font-size: 1.9vw;
+
+}
+
+section .inner2 .card1 .imgbox img{
+    width:45vw;
+    object-fit: cover; 
+    
+}
+
+
+}
+
+
+
+@media screen and (max-width:768px){
+
+
+figure .inner h1 {
+    font-size: 6vw ;
+
+}
+
+figure .inner p {
+    font-size: 4vw ;
+}
+
+
+section .inner2 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section .inner .wrap article {
+    width : 40vw;
+    height : 40vw;
+
+}
+
+section .inner .wrap article .pic {
+    width: 40%;
+    height: auto;
+    margin: auto;
+}
+
+section .inner2 .card1 .imgbox img{
+    width: 100%;
+}
+
+
+section .inner .wrap article h3 {
+    font-size : 4vw;
+
+}
+
+
+
+section .inner2 .card1 .textbox h3 {
+    margin-bottom: 20px;
+    font-size: 5.5vw;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+section .inner2 .card1 .textbox p {
+    font-size: 4vw;
+    padding-bottom: 40px;
+
+}
+
+}
+
+
+@media screen and (max-width:680px) {
+
+
+}
+
+
+@media screen and (max-width:600px){
+    figure .profile .profile1 img {
+        width: 80vw;
+    }
+    figure .profile .profile2 img {
+        width: 80vw;
+    }
+
+
+}
+
+
+
+
+@media screen and (max-width:480px){
+
+}

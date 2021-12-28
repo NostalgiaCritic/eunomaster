@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>euno</title>
-    <link rel="icon" href="favicon.ico" type="static/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="static/x-icon">
     <script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='mediaquery.css') }}">
     <script src="{{ url_for('static', filename='ie.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -24,42 +26,22 @@
         </nav>
     </header>
 
-        <figure>
+    <figure>
 
-            <div class="inner">
-                <p>LAWFIRM EUN-O</p>
-                <h1>끝까지 책임지는 전문 변호사</h1>
-            </div>
+        <div class="inner">
+            <p>LAWFIRM EUN-O</p>
+            <h1>끝까지 책임지는 전문 변호사</h1>
+        </div>
 
-
-            <div class="profile">
+        <div class="profile">
             <div class="profile1">
-                    <div class=logogrey>
-                        <img src="static/img/logogrey.png" alt="로고" width="35px" height="51px">
-                    </div>
-                    <div class="name">김동현</div>
-                    <div class="grade">/ 대표변호사</div>
-                    <div class="lawer">
-                        <img src="static/img/lawer1.png" alt="김동현" width="147px" height="210px">
-                    </div>
-                    <div class="write">
-                        <img src="static/img/write1.png" alt="손글씨" width="344px" height="100px">
-                    </div>
+                <img src="static/img/profile1.png" alt="로고">
             </div>
             <div class="profile2">
-                    <div class=logogrey>
-                        <img src="static/img/logogrey.png" alt="로고" width="35px" height="51px">
-                    </div>
-                    <div class="name">한아름</div>
-                    <div class="grade">/ 전담변호사</div>
-                    <div class="lawer">
-                        <img src="static/img/lawer2.png" alt="로고" width="147px" height="210px">
-                    </div>
-                    <div class="write">
-                        <img src="static/img/write2.png" alt="손글씨" width="344px" height="100px">
-                    </div>
+                <img src="static/img/profile2.png" alt="로고">
             </div>
         </div>
+
 
     </figure>
 
@@ -191,9 +173,9 @@
         </div>
     </section>
 
-        <section class="contact">
-            <h5 class="my-3 border-bottom pb-2">상담 신청</h5>
+        <section class="contact" id="contact">
             <form method="post" class="post-form my-3">
+                <h1 class="my-3 border-bottom pb-2">상담 신청</h1>
                 {{form.csrf_token}}
                 <div class="form-group">
                     <label for="name">성함</label>
@@ -210,27 +192,40 @@
         <footer>
             <div class="inner">
                 <div class="upper">
-                    <h1>법률사무소 은오</h1>
+                    <h1>법률사무소은오</h1>
                 </div>
 
                 <div class="lower">
                     <address>
-                        서울시 서초구 서초중앙로 43, 로얄타워 4층<br>
-                        TEL : 1833-7615
+                        서울시 서초구 서초중앙로 43, 로얄타워 4층
+                        <br>
+                        대표변호사 : 김동현 사업자등록번호 : 723-61-00104
+                        <br>
+                        전화 : 1833-7615 개인정보관리책임자 TEL : 1833-7615
+                        <br>
+                        김동현 변호사
                     </address>
+
+
                     <p>
                         2021 법률사무소 은오 &copy; copyright all right reserved.
                     </p>
                 </div>
             </div>
-        </footer>
+    </footer>
     <script>
-        var ratio = window.devicePixelRatio;
-        if(ratio >= 2){
-            document.querySelector('.pc').style.dispaly='none';
-        } else {
-            document.querySelector('.mobile').style.dispaly='none';
-        }
+        $(function() {
+            $('[href="#contact"]').click(function(e) {
+                e.preventDefault();
+
+                var headerHeight = $('header').outerHeight();
+                var offsetContact = $('#contact').offset().top;
+                var goalPosition = offsetContact - headerHeight;
+                $('html, body').animate({
+                    scrollTop: goalPosition
+                }, 200);
+            })
+        })
     </script>
 </body>
 
