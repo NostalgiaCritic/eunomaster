@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from flask import Blueprint, render_template, request, url_for, current_app
 from werkzeug.utils import redirect
 
@@ -7,6 +5,7 @@ from .. import db
 from ..forms import ContactForm
 from ..models import Contact
 import smtplib, ssl
+from datetime import datetime
 from email.message import EmailMessage
 
 bp = Blueprint('main', __name__, url_prefix='/')
