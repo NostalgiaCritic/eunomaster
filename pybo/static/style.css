@@ -1,99 +1,411 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
-@media screen and (max-width:1120px){
 
-    figure .profile .profile1 img {
-        width: 45vw;
-    }
-
-    figure .profile .profile2 img {
-        width: 45vw;
-    }
-
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
 
 }
 
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
 
-@media screen and (max-width:970px){
+    body {
+        -ms-user-select: none;
+        -moz-user-select: -moz-none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        user-select:none;
+    }
+
+/*콘텐츠 영역 : 1280~1560px
+.inner ---- width : 1280px;  margin : auto;
+*/
+
+/*header*/
+
+    .header_global {
+        position:fixed;
+        width: 100%;
+        z-index: 10;
+        border-bottom: 1px solid #ddd;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+
+    }
+
+
+
+    .header_global nav {
+        width:1280px;
+        display : flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .header_global nav h1 {
+        margin : 0px;
+        font-size : 0px;
+    }
+
+    .header_global nav h1 a {
+        display : block;
+        line-height: 110px;
+        padding : 0 20px;
+        box-sizing: border-box;
+
+
+    }
+
+    .header_global nav h1 a:hover {
+        display : block;
+        line-height: 110px;
+        padding : 0 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+
+    }
+
+    .header_global nav .nav_menu {
+        display: flex;
+        margin:0px; /*부트스트랩 적용된 마진값 없애주기 위해*/
+    }
+
+    .header_global nav .nav_menu li a {
+        display: block;
+        font-size: 20px;
+        color: #555;
+        padding: 20px 20px;
+        transition: all 0.5s;
+        text-decoration: none;
+    }
+
+    .header_global nav .nav_menu li a:hover {
+        background: #555;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+
+    figure {
+        width: 100%;
+        height: 100vh;
+        background-image: url(../static/img/main_bg.jpg);
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: cover;
+        text-align: center;
+        padding-top : 15rem;
+        margin : 0px;
+    }
+
+
+    figure .inner {
+        display: inline-block;
+        text-align: center;
+
+    }
     figure .inner h1 {
-        margin-bottom : 4rem;
+        font-family:'Nanum Myeongjo' ;
+        font-size: 3rem;
+        color: #000;
+        text-align: center;
+        margin-bottom : 6rem;
     }
 
-    figure .profile .profile1 {
-        padding-bottom: 50px;
+    figure .inner p {
+        font: 40px/1 'Nanum Myeongjo';
+        color: #888;
+        text-align: center;
+
+    }
+
+    figure .profile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    figure .profile1 {
+        padding : 0 20px;
     }
 
 
-    figure .profile .profile1 img {
-        width: 90%;
+    figure .profile2 {
+        padding : 0 20px;
     }
 
-    figure .profile .profile2 img {
-        width: 90%;
+    section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
+
+    .sc_bg {
+        display: flex;
+        background-color: rgb(169, 174, 189);
+    }
+
+    section .inner {
+        width: 1280px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /*블랙ver*/
+
+    /* section .inner h1 {
+        font: bold 30px 'Nanum Myeongjo' ;
+        color: #555;
+        text-align: left;
+        margin-bottom: 50px;
+        padding-left: 20px;
+    }
+
+    section .inner h2 {
+        font: bold 25px 'Nanum Myeongjo' ;
+        color: #888;
+        text-align: left;
+        margin-bottom: 20px;
+        padding-left: 20px;
+    } */
+
+
+
+    section .inner h1 {
+        font: bold 30px 'Nanum Myeongjo' ;
+        color: rgb(255, 255, 255);
+        text-align: left;
+        margin-bottom: 50px;
+        padding-left: 30px;
+    }
+
+    section .inner h2 {
+        font: bold 25px 'Nanum Myeongjo' ;
+        color: rgb(216, 216, 216);
+        text-align: left;
+        margin-bottom: 20px;
+        padding-top:90px;
+        padding-left: 30px;
+    }
+
+
+
+
+    section .inner .wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap:wrap;
+        padding-bottom: 90px;
+    }
+
+    section .inner .wrap article {
+        width: 290px;
+        height: 275px;
+        margin: 10px;
+        border: 2px solid rgb(218, 218, 218);
+
+    }
+
+    section .inner .wrap article h3 {
+        font: 23px 'Noto Sans KR', sans-serif;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 35px;
+    }
+    section .inner .wrap article .pic {
+        width: 100px;
+        height: 100px;
+        margin: 40px auto;
+        position: relative;
+        overflow: hidden;
+    }
+    section .inner .wrap article .pic img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    section .inner2 {
+        width: 1280px;
+    }
+
+    section .inner2 h1 {
+        font: bold 30px 'Nanum Myeongjo' ;
+        color: #555;
+        text-align: left;
+        margin-bottom: 50px;
+        padding-left: 20px;
+    }
+
+    section .inner2 h2 {
+        font: bold 25px 'Nanum Myeongjo' ;
+        color: #888;
+        text-align: left;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        padding-top:90px;
+    }
+
+
+    section .inner2 .wrap2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section .inner2 .wrap2 .card1 {
+        display: flex;
+        align-items : center;
+        margin-bottom: 30px;
+        border: 1px rgb(218, 218, 218) solid;
+    }
+
+
+    section .inner2 .card1 .imgbox{
+        flex:1.3;
+        overflow: hidden;
+    }
+
 
     section .inner2 .card1 .imgbox img{
         width:100%;
-        min-width : 390px;
         object-fit: cover;
 
     }
 
-}
+    section .inner2 .card1 .textbox {
+        flex:2;
+        font-family:'Noto Sans KR', sans-serif;
+        padding : 30px 0px 0px 30px;
+        /* flex:6; */
+
+    }
+
+    section .inner2 .card1 .textbox h3 {
+        margin-bottom: 20px;
+        font-size: 23px;
+        font-weight: 600;
+    }
+
+    section .inner2 .card1 .textbox p {
+        font-size: 1.2rem;
+
+    }
+
+    section .inner2 .card1 .textbox p span {
+        font-weight: 600;
+        color:rgb(19, 73, 153)
+
+    }
 
 
-@media screen and (max-width:768px){
+    .contact {
+        width:100%;
+        margin: auto;
+
+    }
+    .contact h1 {
+        font: bold 30px/1 'Nanum Myeongjo' ;
+        text-align: center;
+        margin-top:50px;
+    }
 
 
-figure .inner h1 {
-    font-size: 6.2vw ;
-}
+    .contact .post-form .form-group {
+        width : 80vw;
+        max-width: 900px;
+        margin: auto;
+    }
 
-figure .inner p {
-    font-size: 5vw ;
-}
+    .contact .post-form .privacy-agree  {
+        margin: 50px auto;
+        text-align: center;
+    }
 
-
-section .inner .wrap article {
-    width : 40vw;
-    height : 40vw;
-
-}
-
-section .inner .wrap article .pic {
-    width: 40%;
-    height: auto;
-    margin: auto;
-}
+    .contact .post-form .privacy-agree .btn-view-privacy{
+        border : 0 none;
+    }
 
 
-
-section .inner .wrap article h3 {
-    font-size : 4vw;
-
-}
-
-section .inner2 {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-section .inner2 .wrap2 .card1{
-    display:block;
-}
+    .contact .post-form .btn-primary{
+        width: 400px;
+        display: block;
+        margin: auto;
+        font-family:'Noto Sans KR', sans-serif;
+        font-size: 25px;
+    }
 
 
 
-section .inner2 .card1 .imgbox{
-    display:block;
-    width: 100%;
-    height : 40vh;
-}
 
+    footer {
+        background: #333;
+        padding: 50px 50px;
+        border-top: 1px solid #888;
+        margin-top: 200px;
+    }
+    footer .inner {
+        width: 1180px;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 0px auto;
+    }
+    footer .inner .upper {
+        width: 100%;
+        border-bottom: 1px solid #777;
+        padding-bottom: 20px;
+    }
+    footer .inner .upper::after {
 
-section .inner2 .card1 .imgbox img{
-    height : 100%;
-}
-
-}
+        content: "";
+        display: block;
+        clear: both;
+    }
+    footer .inner .upper h1 {
+        float: left;
+        font: bold 24px/1 "arial";
+        color: #666;
+    }
+    footer .inner .upper ul {
+        float: right;
+    }
+    footer .inner .upper ul li {
+        float: left;
+        margin-left: 20px;
+    }
+    footer .inner .upper ul li a {
+        font: bold 14px/1 "arial";
+        color: #666;
+    }
+    footer .inner .lower {
+        width: 100%;
+        padding-top: 20px;
+    }
+    footer .inner .lower address {
+        width: 100%;
+        font: 12px/1.3 "arial";
+        color: #777;
+        margin-bottom: 20px;
+    }
+    footer .inner .lower p {
+        width: 100%;
+        font: 12px/1 "arial";
+        color: #777;
+    }
