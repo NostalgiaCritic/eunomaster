@@ -15,8 +15,8 @@
 </head>
 
 <body>
-    <header>
-        <nav class="header_global">
+    <header class="header_global">
+        <nav>
             <h1><a href="#"><img src="static/img/logo.png" alt="로고" width="100px" height="45px"></a></h1>
 
             <ul class="nav_menu">
@@ -175,7 +175,7 @@
 
         <section class="contact" id="contact">
             <form method="post" class="post-form my-3">
-                <h1 class="my-3 border-bottom pb-2">상담 신청</h1>
+                <h1>맞춤 상담신청</h1>
                 {{form.csrf_token}}
                 <div class="form-group">
                     <label for="name">성함</label>
@@ -185,7 +185,10 @@
                     <label for="number">전화번호</label>
                     <input type="text" class="form-control" name="number" id="number" value="{{ form.number.data or '' }}">
                 </div>
-                <button type="submit" class="btn btn-primary">신청하기</button>
+                <div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">상담 신청</button>
+                </div>
             </form>
         </section>
 
