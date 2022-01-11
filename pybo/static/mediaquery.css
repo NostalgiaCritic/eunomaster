@@ -1,6 +1,6 @@
 
 @media screen and (max-width:1120px){
-    
+
     figure .profile .profile1 img {
         width: 45vw;
     }
@@ -34,8 +34,8 @@
     section .inner2 .card1 .imgbox img{
         width:100%;
         min-width : 390px;
-        object-fit: cover; 
-        
+        object-fit: cover;
+
     }
 
 }
