@@ -17,85 +17,72 @@ a {
     text-decoration: none;
 }
 
-    body {
-        -ms-user-select: none;
-        -moz-user-select: -moz-none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        user-select:none;
-    }
-
-/*콘텐츠 영역 : 1280~1560px
-.inner ---- width : 1280px;  margin : auto;
-*/
-
-/*header*/
-
-    .header_global {
-        position:fixed;
-        width: 100%;
-        z-index: 10;
-        border-bottom: 1px solid #ddd;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-
-    }
+body {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select:none;
+}
 
 
+.header_global {
+    position:fixed;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
 
-    .header_global nav {
-        width:1280px;
-        display : flex;
-        justify-content: space-between;
-        align-items: center;
+.header_global nav {
+    width:1280px;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    }
+.header_global nav h1 {
+    margin : 0px;
+    font-size : 0px;
+}
 
-    .header_global nav h1 {
-        margin : 0px;
-        font-size : 0px;
-    }
+.header_global nav h1 a {
+    display : block;
+    line-height: 110px;
+    padding : 0 20px;
+    box-sizing: border-box;
+ }
 
-    .header_global nav h1 a {
-        display : block;
-        line-height: 110px;
-        padding : 0 20px;
-        box-sizing: border-box;
+.header_global nav h1 a:hover {
+    display : block;
+    line-height: 110px;
+    padding : 0 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
 
+.header_global nav .nav_menu {
+    display: flex;
+    margin: 0px;
+}
 
-    }
+.header_global nav .nav_menu li a {
+    display: block;
+    font-size: 20px;
+    color: #555;
+    padding: 20px 20px;
+    transition: all 0.5s;
+    text-decoration: none;
+}
 
-    .header_global nav h1 a:hover {
-        display : block;
-        line-height: 110px;
-        padding : 0 20px;
-        box-sizing: border-box;
-        cursor: pointer;
-
-    }
-
-    .header_global nav .nav_menu {
-        display: flex;
-        margin:0px; /*부트스트랩 적용된 마진값 없애주기 위해*/
-    }
-
-    .header_global nav .nav_menu li a {
-        display: block;
-        font-size: 20px;
-        color: #555;
-        padding: 20px 20px;
-        transition: all 0.5s;
-        text-decoration: none;
-    }
-
-    .header_global nav .nav_menu li a:hover {
-        background: #555;
-        color: #fff;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
+.header_global nav .nav_menu li a:hover {
+    background: #555;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
 
     figure {
         width: 100%;
